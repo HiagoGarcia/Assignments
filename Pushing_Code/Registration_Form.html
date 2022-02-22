@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <body>
+            <h1>Registration Form</h1>
+                <form action="/process" method="post">
+                    <div>
+                        <lable><h4>First Name*</h4></lable>
+                        <input type="text" name="name" placeholder="First Name...">
+                    </div>
+                    <div>
+                        <label><h4>Last Name*</h4></label>
+                        <input type="text" name="name" placeholder="Last Name...">
+                    </div>
+                    <div>
+                        <label><h4>Email Address*</h4></label>
+                        <input type="text" name="name" placeholder="Example.email@gmail.com">
+                    </div>
+                    <div>
+                        <label><h4>Password*</h4></label>
+                        <input type="password" name="password" placeholder="*********">
+                    </div>
+                    <div>
+                        <label><h4>Confirm Password*</h4></label>
+                        <input type="password" name="password" placeholder="*********">
+                    </div>
+                    <div>
+                        <label><h4>Gender Identity:</h4></label>
+                        <input type="radio" name="font" value="Male">
+                        <label for="Male">Male</label>
+                        <input type="radio" name="font" value="Female">
+                        <label for="Female">Female</label>
+                        <input type="radio" name="font" value="Non-binary">
+                        <label for="Non-binary">Non-binary</label>
+                        <input type="radio" name="font" value="I prefer not to answer">
+                        <label for="I prefer not to answer">I prefer not to answer</label>
+                    </div>
+                    <div>
+                        <label>A short description about myself:</label>
+                        <textarea name="comment" cols="40" rows="3"></textarea>
+                    </div>
+                    <div>
+                        <label>Favorite Language</label>
+                        <select name="Coding Language">
+                            <option>Java</option>
+                            <option>html</option>
+                            <option>Python</option>
+                            <option>C++</option>
+                            <option>C#</option>
+                            <option>C</option>
+                            <option>Other</option>
+                        </select>
+                        <label>If other what language</label>
+                        <textarea name="comment" cols="20" rows="1"></textarea>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="accept" id="accept">
+                        <label for="accept">Yes, I would like to recieve periodic email updates</label>
+                    </div>
+                    <div>
+                        <input type="submit" value="Create Account">
+                    </div>
+                    <div>
+                        <label>* Indicates a required field</label>
+                    </div>
+                </form>
+        </body>
+    </head>
+</html>
