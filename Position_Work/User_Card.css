@@ -46,6 +46,10 @@ ul{
     display: inline;
 }
 
+.lines{
+    border-right: 2px solid black;
+}
+
 .Location{
     display: inline;
     vertical-align: top;
