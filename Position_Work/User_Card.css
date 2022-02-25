@@ -52,7 +52,7 @@ body{
 
 .Connection_Box_Base{
     background-color: whitesmoke;
-    height: 300px;
+    height: auto;
     width: 400px;
     margin: 30px auto 0px;
     padding: 0px;
@@ -61,6 +61,7 @@ body{
 
 .education{
     width: 600px;
+    height: auto;
 }
 
 .nav-links{
@@ -125,12 +126,59 @@ li{
     justify-content: space-evenly;
 }
 
+.calls{
+    display: inline-block;
+    margin: 30px 10px;
+    padding: 0px 30px;
+}
+
 .Profile_Pic{
     height: 90px;
     width: 90px;
     border: 3px solid lightgray;
     border-radius: 50%;
     margin-top: -70px;
+}
+
+.name{
+    display: inline;
+}
+
+.check{
+    height: 50px;
+    width: 50px;
+    border: 3px solid rgb(29, 204, 52);
+    background-color: rgb(29, 204, 52);
+    font-size: xx-large;
+    font-weight: bolder;
+    border-radius: 50%;
+    margin-top: -70px;
+}
+
+.end{
+    height: 50px;
+    width: 50px;
+    border: 3px solid rgb(230, 17, 17);
+    background-color: rgb(230, 17, 17);
+    font-size: xx-large;
+    font-weight: bolder;
+    border-radius: 50%;
+    margin-top: -70px;
+}
+
+.connections_pic{
+    height: 50px;
+    width: 50px;
+    border: 3px solid lightgray;
+    border-radius: 50%;
+    margin-top: -70px;
+}
+
+.view{
+    border-top: 3px solid lightgray;
+    padding: 10px;
+    font-weight: bold;
+    font-size: x-large;
 }
 
 .Username{
@@ -154,13 +202,13 @@ li{
 }
 
 table{
-    margin: 5px 0px
+    margin: 10px 0px
 }
 
 td{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    font-size: small;
+    font-size: medium;
 }
 
 .cog{
@@ -176,11 +224,16 @@ td{
 
 .Bigger{
     font-size: 220%;
-    margin: 20px auto;
+    margin: 20px auto 0px;
 }
 
 .Lighter{
+    color: grey;
+    font-size: 150%
+}
 
+p{
+    font-size: 175%;
 }
 
 a{
