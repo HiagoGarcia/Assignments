@@ -100,7 +100,7 @@ input{
 }
 
 .likes{
-    width: 100px;
+    width: 100%;
     color: black;
     background-color: goldenrod;
     font-weight: bolder;
