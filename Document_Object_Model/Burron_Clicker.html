@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Clicker</title>
+    <link rel="stylesheet" href="Button_Clicker.css">
+    <script src="Button_Clicker.js"></script>
+</head>
+<body>
+    <!--The Nav Bar-->
+    <div>
+        <div class="Nav_Bar">
+            <div class="Nav_Icons">
+                <div class="space">
+                    <h1>Dojonary</h1>
+                </div>
+                <div class="space">
+                    <input type="text" name="search_bar" placeholder="Search...">
+                </div>
+                <div
+                class="space">
+                    <button class="btn" onclick="logout(this)">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--The left and right columns start here-->
+    <div class="columns">
+        <div class="left_side">
+            <!--The definition box-->
+            <div class="wordbox_base">
+                <div class="leftbox"><!--Base of the left side of the box-->
+                    <!--Even more subdivision, boxes whitin boxes-->
+                    <div class="box_base">
+                        <div class="box_content">
+                            <div class="content">
+                                <h1 class="margins">ninja</h1>
+                            </div>
+                        </div>
+                        <div class="box_content">
+                            <div class="content">
+                                <h3 class="margins">noun</h3>
+                            </div>
+                        </div>
+                        <div class="box_content">
+                            <div class="content">
+                                <h4 class="margins-1">Plural: <span class="italics">ninjas</span></h4>
+                            </div>
+                        </div>
+                        <div class="box_content">
+                            <div class="content">
+                                <button class="btn likes" onclick="alert('Ninja was liked')">13 Likes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightbox">
+                    <div class="box_base_right">
+                        <div class="box_content">
+                            <div class="content>">
+                                <p>A practitioner skilled in the <span><a href="#">Japanese</a></span> art of <span><a href="#">ninjutsu</a></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wordbox_base">
+                <div class="leftbox"><!--Base of the left side of the box-->
+                    <!--Even more subdivision, boxes whitin boxes-->
+                    <div class="box_base">
+                        <div class="box_content">
+                            <div class="content">
+                                <h1 class="margins">ninja</h1>
+                            </div>
+                        </div>
+                        <div class="box_content">
+                            <div class="content">
+                                <h3 class="margins">noun</h3>
+                            </div>
+                        </div>
+                        <div class="box_content">
+                            <div class="content">
+                                <h4 class="margins-1">Plural: <span class="italics">ninjas</span></h4>
+                            </div>
+                        </div>
+                        <div class="box_content">
+                            <div class="content">
+                                <button class="btn likes" onclick="alert('Ninja was liked')">37 Likes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightbox">
+                    <div class="box_base_right">
+                        <div class="box_content">
+                            <div class="content>">
+                                <p>A <span><a href="#">programmer</a></span> who breaks down problems with <span><a href="#">zen</a></span>-like focus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Right side of the webpage-->
+        <div class="right_side">
+            <div class="wordbox_base">
+                <div class="box_base_right">
+                    <div class="box_content">
+                        <div class="content">
+                            <h2 class="margins">Dojonary is defined by <span class="bold">YOU</span></h2>
+                        </div>
+                    </div>
+                    <div class="box_content">
+                        <button class="btn margins-2 add" onclick="hide(this)">Add Definition</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
