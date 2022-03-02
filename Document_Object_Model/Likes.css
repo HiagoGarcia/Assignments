@@ -38,7 +38,6 @@ h3{
 /* css code for part 2 */
 .wrapper{
     display: flex;
-    align-items: top;
 }
 
 .navbar{
