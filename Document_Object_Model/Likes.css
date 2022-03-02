@@ -1,0 +1,88 @@
+/* css for part 1 and part 2 */
+
+.user_box{
+    height: 150px;
+    width: 400px;
+    border: 3px solid black;
+    margin-bottom: 15px;
+    margin-left: auto;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+h3{
+    margin-left: 40px
+}
+
+.btn{
+    width:  70px;
+    height: 30px;
+    border: 3px solid black;
+    background-color: goldenrod;
+    box-shadow: 5px 5px black;
+    font-weight: bold;
+}
+
+.filler{
+    padding: 0px 15px;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* css code for part 2 */
+.wrapper{
+    display: flex;
+    align-items: top;
+}
+
+.navbar{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 30px;
+    font-family: sans-serif;
+    height: 60px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+}
+
+.right_side{
+    width: 70%;
+    justify-content: ;
+}
+
+.left_side{
+    width: 30%;
+}
+
+.user_profile{
+    height: auto;
+    width: auto;
+    border: 3px solid black;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pic{
+    display: flex;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
