@@ -39,16 +39,18 @@ first_name - KB, last_name - Tonel
 """
 def iterateDictionary(some_list):
     for i in range(len(some_list)):
-        print(some_list[i])
-    # for key, val in some_list:
+        for key, value in some_list[i].items():
+            print(key, value)
+            
     #     print('first_name', '-', key, ',', 'last_name', '-', val)
 
 print(iterateDictionary(students))
 
 #Problem 3
-def iterateDictionary2(first_name, students):
-    for i in range(len(students)):
-        print(first_name[i])
+def iterateDictionary2(first_name, some_list):
+    for i in range(len(some_list)):
+        for first_name in some_list.keys:
+            print(first_name)
 print(iterateDictionary2(students))
 
 # Problem 4
