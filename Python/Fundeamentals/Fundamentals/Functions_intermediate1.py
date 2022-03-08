@@ -39,19 +39,15 @@ first_name - KB, last_name - Tonel
 """
 def iterateDictionary(some_list):
     for i in range(len(some_list)):
-        for key, value in some_list[i].items():
-            print(key, value)
-            
-    #     print('first_name', '-', key, ',', 'last_name', '-', val)
+        print(f"first_name - {some_list[i] ['first_name']}, last_name - {some_list[i] ['last_name']}")
 
-print(iterateDictionary(students))
+iterateDictionary(students)
 
 #Problem 3
-def iterateDictionary2(first_name, some_list):
-    for i in range(len(some_list)):
-        for first_name in some_list.keys:
-            print(first_name)
-print(iterateDictionary2(students))
+# def iterateDictionary2(first_name, some_list):
+#     for i in range(len(some_list[first_name])):
+#             print(some_list[first_name][i])
+# iterateDictionary2(students['first_name'])
 
 # Problem 4
 dojo = {
