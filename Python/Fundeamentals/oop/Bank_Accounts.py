@@ -13,10 +13,10 @@ class Bank_account:
     def withdrawal(self, ammount):
         if self.balance <= 0:
             self.balance -= 5
-            print('Charging a $5 fee')
+            print('Incificiant Funds: Charging a $5 fee')
         elif (self.balance - ammount <0):
             self.balance -= ammount + 5
-            print('Charging a $5 fee')
+            print('Incificiant Funds: Charging a $5 fee')
         else:
             self.balance -= ammount
 

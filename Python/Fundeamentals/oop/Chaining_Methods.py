@@ -1,6 +1,3 @@
-from unicodedata import name
-
-
 class Bank_account:
     def __init__(self, name, balance):
         self.name = name
