@@ -74,3 +74,5 @@ class User:
 #Users
 user1 = User('Guido van Rossum')
 user2 = User('Lester')
+
+Bank_account.all_balances()

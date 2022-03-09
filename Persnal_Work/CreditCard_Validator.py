@@ -17,7 +17,7 @@ length: 15
 
 #Problem 1
 visa = [4,0,1,2,8,8,8,8,8,8,8,8,1,8,8,1]
-visa2 = [5,0,2,3,1,8,8,2,6,4,8,9,2,2,2,0]
+visa2 = [4,1,3,3,1,8,8,2,6,4,8,9,2,2,2,0]
 master = [5,1,0,5,1,0,5,1,0,5,1,0,5,1,0,0]
 def sum(visa):
     oddsum = 0
@@ -32,15 +32,13 @@ def sum(visa):
                 evensum += temp%10 + 1
             else:
                 evensum += temp
+            print(evensum)
     sum = evensum + oddsum
     if(sum%10 == 0):
         print(f"{visa} is a valid credit card number")
     else:
         print(f"{visa} is not a valid card number")
-    print(oddsum)
-    print(evensum)
     print(sum)
-
 sum(visa2)
 
 
