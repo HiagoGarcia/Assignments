@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/play')
 def index():
-    return render_template('playground.html',)
+    return render_template('playground.html', box = '', times = 3)
 
 
 if __name__=="__main__":
