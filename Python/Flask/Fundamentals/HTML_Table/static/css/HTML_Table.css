@@ -1,0 +1,16 @@
+.main{
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    align-items: middle;
+    justify-content: center;
+    text-align: center;
+}
+
+.block{
+    height: 50px;
+    width: 50%;
+    background-color: darkslategray;
+}
