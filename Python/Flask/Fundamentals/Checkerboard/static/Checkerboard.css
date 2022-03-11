@@ -1,0 +1,14 @@
+.main{
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    align-items: middle;
+    justify-content: center;
+}
+
+.checker{
+    height: 100px;
+    width: 100px;
+}
