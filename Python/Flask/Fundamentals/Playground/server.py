@@ -7,11 +7,11 @@ def level1():
 
 @app.route('/play/<num>')
 def level2(num):
-    return render_template('playground.html', times = int(num))
+    return render_template('playground.html', times = int(num), b_c= 'aqua')
 
 @app.route('/play/<num>/<color>')
 def level3(num,color):
-    return render_template('playground.html', times = int(num), b_c = str(color))
+    return render_template('playground.html', times = int(num), b_c = color)
 
 if __name__=="__main__":
     app.run(debug=True)
