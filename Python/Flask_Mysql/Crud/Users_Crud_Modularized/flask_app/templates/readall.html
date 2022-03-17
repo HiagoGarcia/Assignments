@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read (All)</title>
+</head>
+<body>
+    <h1>All Users</h1>
+    <table>
+        <thead>
+            <tr>ID</tr>
+            <tr>First Name</tr>
+            <tr>Last Name</tr>
+            <tr>Email</tr>
+            <tr>Actions</tr>
+        </thead>
+        <tbody>
+            {% for user in all_users %}
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.email}}</td>
+                <td><a href="/user/show/{{user.id}}">Show User</a></td>
+                <td><a href="/user/edit/{{user.id}}">Edit User</a></td>
+                <td><a href="/user/{{user.id}}/delete">Delete User</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/user/new">Add User</a>
+</body>
+</html>
