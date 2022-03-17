@@ -9,6 +9,7 @@
 <body>
     <h1>Update User</h1>
     <a href="/">Home</a>
+    <a href="/user/show/{{user.id}}">Show User</a>
     <form action="/user/edit" method="post">
         <input type="hidden" name="id" value="{{user.id}}">
         <label>First Name</label>
