@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main role="main">
+        <div class="container bg-light text-center">
+            <h1>The email address you entered {{one_email.email}} is a VALID email address! Thank you!</h1>
+            <table>
+                <thead>Email Addresses Entered</thead>
+                <tbody>
+                    {% for emails in all_emails %}
+                    <tr>
+                        <td>{{emails.email}}     {{emails.created_at}}</td>
+                    </tr>
+                    {% endfor%}
+                </tbody>
+            </table>
+            <a href="/" class="btn">Go Back</a>
+        </div>
+
+</body>
+</html>
