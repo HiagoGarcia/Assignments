@@ -1,0 +1,13 @@
+C:\Code Stuff\Assignments\Assignments\C#\Collections_Practice\bin\Debug\netcoreapp3.1\Collections_Practice.exe
+C:\Code Stuff\Assignments\Assignments\C#\Collections_Practice\bin\Debug\netcoreapp3.1\Collections_Practice.deps.json
+C:\Code Stuff\Assignments\Assignments\C#\Collections_Practice\bin\Debug\netcoreapp3.1\Collections_Practice.runtimeconfig.json
+C:\Code Stuff\Assignments\Assignments\C#\Collections_Practice\bin\Debug\netcoreapp3.1\Collections_Practice.runtimeconfig.dev.json
+C:\Code Stuff\Assignments\Assignments\C#\Collections_Practice\bin\Debug\netcoreapp3.1\Collections_Practice.dll
+C:\Code Stuff\Assignments\Assignments\C#\Collections_Practice\bin\Debug\netcoreapp3.1\Collections_Practice.pdb
+C:\Code Stuff\Assignments\Assignments\C#\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.csprojAssemblyReference.cache
+C:\Code Stuff\Assignments\Assignments\C#\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.AssemblyInfoInputs.cache
+C:\Code Stuff\Assignments\Assignments\C#\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.AssemblyInfo.cs
+C:\Code Stuff\Assignments\Assignments\C#\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.csproj.CoreCompileInputs.cache
+C:\Code Stuff\Assignments\Assignments\C#\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.dll
+C:\Code Stuff\Assignments\Assignments\C#\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.pdb
+C:\Code Stuff\Assignments\Assignments\C#\Collections_Practice\obj\Debug\netcoreapp3.1\Collections_Practice.genruntimeconfig.cache
