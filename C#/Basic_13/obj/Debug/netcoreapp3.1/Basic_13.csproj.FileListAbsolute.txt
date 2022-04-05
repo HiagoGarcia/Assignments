@@ -1,0 +1,13 @@
+C:\Code Stuff\Assignments\Assignments\C#\Basic_13\bin\Debug\netcoreapp3.1\Basic_13.exe
+C:\Code Stuff\Assignments\Assignments\C#\Basic_13\bin\Debug\netcoreapp3.1\Basic_13.deps.json
+C:\Code Stuff\Assignments\Assignments\C#\Basic_13\bin\Debug\netcoreapp3.1\Basic_13.runtimeconfig.json
+C:\Code Stuff\Assignments\Assignments\C#\Basic_13\bin\Debug\netcoreapp3.1\Basic_13.runtimeconfig.dev.json
+C:\Code Stuff\Assignments\Assignments\C#\Basic_13\bin\Debug\netcoreapp3.1\Basic_13.dll
+C:\Code Stuff\Assignments\Assignments\C#\Basic_13\bin\Debug\netcoreapp3.1\Basic_13.pdb
+C:\Code Stuff\Assignments\Assignments\C#\Basic_13\obj\Debug\netcoreapp3.1\Basic_13.csprojAssemblyReference.cache
+C:\Code Stuff\Assignments\Assignments\C#\Basic_13\obj\Debug\netcoreapp3.1\Basic_13.AssemblyInfoInputs.cache
+C:\Code Stuff\Assignments\Assignments\C#\Basic_13\obj\Debug\netcoreapp3.1\Basic_13.AssemblyInfo.cs
+C:\Code Stuff\Assignments\Assignments\C#\Basic_13\obj\Debug\netcoreapp3.1\Basic_13.csproj.CoreCompileInputs.cache
+C:\Code Stuff\Assignments\Assignments\C#\Basic_13\obj\Debug\netcoreapp3.1\Basic_13.dll
+C:\Code Stuff\Assignments\Assignments\C#\Basic_13\obj\Debug\netcoreapp3.1\Basic_13.pdb
+C:\Code Stuff\Assignments\Assignments\C#\Basic_13\obj\Debug\netcoreapp3.1\Basic_13.genruntimeconfig.cache
