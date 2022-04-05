@@ -1,20 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Puzzles
 {
     class Program
     {
-        static void RandomArray()
+        static void RandomArray(int[] numbers)
         {
             Random rnd = new Random();
-            for (int i = 5; i <= 25; i++)
+            for (int i = 0; i < 10; i++)
             {
-                int[] numbers = new int[] {rnd.Next()};
+                numbers[i] = rnd.Next(5,25);
+            }
+            for( int id = 0; id < numbers.Length; id++)
+            {
+                Console.WriteLine(numbers[id]);
             }
         }
         static void Main(string[] args)
         {
-            RandomArray();
+            RandomArray(new int[10]);
         }
     }
 }
