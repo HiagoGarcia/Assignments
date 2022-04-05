@@ -5,104 +5,99 @@ namespace Puzzles
 {
     class Program
     {
-        static void RandomArray(int[] numbers)
+        static int[] RandomArray()
         {
             Random rnd = new Random();
-            int max = 0;
-            int min = max;
-            for (int i = 0; i < 10; i++)
+            int[] numbers = new int[10];
+            int max;
+            int min;
+            int sum = 0;
+            for (int i = 0; i < numbers.Length; i++)
             {
                 numbers[i] = rnd.Next(5, 26);
-                if (min == 0)
-                {
-                    min = (int)numbers[0];
-                }
-                if (numbers[i] > max)
-                    max = (int)numbers[i];
-                {
-                }
-                if (numbers[i] < min)
-                {
-                    min = (int)numbers[i];
-                }
             }
-            for (int id = 0; id < numbers.Length; id++)
+            max = numbers[0];
+            min = numbers[0];
+            for (int i = 0; i < numbers.Length; i++)
             {
-                Console.WriteLine(numbers[id]);
+                if (numbers[i] > max)
+                {
+                    max = numbers[i];
+                }
+                else if (numbers[i] < min)
+                {
+                    min = numbers[i];
+                }
             }
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                sum = sum + numbers[i];
+            }
+            Console.WriteLine(sum);
             Console.WriteLine($"Min: {min}, Max: {max}");
+            return numbers;
         }
 
-        static int TossCoin()
+        static string TossCoin()
         {
             Random rnd = new Random();
-            Console.WriteLine((string)"Tossing a Coin!");
-            int toss = rnd.Next(1, 3);
-            if (toss == 1)
+            Console.WriteLine("Tossing a Coin!");
+            string result;
+            int toss = rnd.Next(2);
+            if (toss == 0)
             {
-                Console.WriteLine("Heads");
-                return (int)1;
+                result = "Heads";
             }
             else
             {
-                Console.WriteLine("Tails");
-                return (int)2;
+                result = "Tails";
             }
+            Console.WriteLine(result);
+            return result;
         }
 
         static double TossMultipleCoins(int num)
         {
-            int heads = 0;
-            int tails = 0;
+            double heads = 0;
             for (int i = 0; i < num; i++)
             {
-                TossCoin();
-                if (TossCoin() == 1)
+                if (TossCoin() == "Heads")
                 {
-                    heads = heads + 1;
-                }
-                else
-                {
-                    tails = tails + 1;
+                    heads++;
                 }
             }
-            if (heads > tails)
-            {
-                Console.WriteLine($"An ratio of {(double)(int)heads / (int)tails} heads to tails");
-                return (double)(int)heads / (int)tails;
-            }
-            else
-            {
-                Console.WriteLine($"An ratio of {(double)(int)tails / (int)heads} tails to heads");
-                return (double)(int)tails / (int)heads;
-            }
+            Console.WriteLine($"An ratio of {heads / num} heads to total tosses.");
+            return heads / num;
         }
 
         static List<string> Names()
         {
             Random rnd = new Random();
-            List<string> names = new List<string>();
-            names.Add("Todd");
-            names.Add("Tiffany");
-            names.Add("Charlie");
-            names.Add("Geneva");
-            names.Add("Sydney");
-            List<string> newList = new List<string>();
-            foreach( string name in names)
+            List<string> names = new List<string>() { "Todd", "Tiffany", "Charlie", "Geneva", "Sydney" };
+            List<string> greaterThen5 = new List<string>();
+            for (int i = 0; i < names.Count; i++)
             {
                 int index = rnd.Next(names.Count);
                 string randomName = names[index];
-                Console.WriteLine(randomName);
-                if(name.Length > 5)
+                names[index] = names[i];
+                names[i] = randomName;
+            }
+            foreach (string name in names)
+            {
+                Console.WriteLine(name);
+            }
+            for (int i = 0; i < names.Count; i++)
+            {
+                if (names[i].Length > 5)
                 {
-                    newList.Add(name);
+                    greaterThen5.Add(names[i]);
                 }
             }
-            return newList;
+            return greaterThen5;
         }
         static void Main(string[] args)
         {
-            RandomArray(new int[10]);
+            RandomArray();
             TossCoin();
             TossMultipleCoins(3);
             Names();
