@@ -1,0 +1,13 @@
+C:\Code Stuff\Assignments\Assignments\C#\Multiplication_Table\bin\Debug\netcoreapp3.1\Multiplication_Table.exe
+C:\Code Stuff\Assignments\Assignments\C#\Multiplication_Table\bin\Debug\netcoreapp3.1\Multiplication_Table.deps.json
+C:\Code Stuff\Assignments\Assignments\C#\Multiplication_Table\bin\Debug\netcoreapp3.1\Multiplication_Table.runtimeconfig.json
+C:\Code Stuff\Assignments\Assignments\C#\Multiplication_Table\bin\Debug\netcoreapp3.1\Multiplication_Table.runtimeconfig.dev.json
+C:\Code Stuff\Assignments\Assignments\C#\Multiplication_Table\bin\Debug\netcoreapp3.1\Multiplication_Table.dll
+C:\Code Stuff\Assignments\Assignments\C#\Multiplication_Table\bin\Debug\netcoreapp3.1\Multiplication_Table.pdb
+C:\Code Stuff\Assignments\Assignments\C#\Multiplication_Table\obj\Debug\netcoreapp3.1\Multiplication_Table.csprojAssemblyReference.cache
+C:\Code Stuff\Assignments\Assignments\C#\Multiplication_Table\obj\Debug\netcoreapp3.1\Multiplication_Table.AssemblyInfoInputs.cache
+C:\Code Stuff\Assignments\Assignments\C#\Multiplication_Table\obj\Debug\netcoreapp3.1\Multiplication_Table.AssemblyInfo.cs
+C:\Code Stuff\Assignments\Assignments\C#\Multiplication_Table\obj\Debug\netcoreapp3.1\Multiplication_Table.csproj.CoreCompileInputs.cache
+C:\Code Stuff\Assignments\Assignments\C#\Multiplication_Table\obj\Debug\netcoreapp3.1\Multiplication_Table.dll
+C:\Code Stuff\Assignments\Assignments\C#\Multiplication_Table\obj\Debug\netcoreapp3.1\Multiplication_Table.pdb
+C:\Code Stuff\Assignments\Assignments\C#\Multiplication_Table\obj\Debug\netcoreapp3.1\Multiplication_Table.genruntimeconfig.cache
