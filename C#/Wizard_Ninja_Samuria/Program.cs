@@ -1,5 +1,5 @@
 ﻿using System;
-using Person;
+using Wizard_Ninja_Samuria;
 
 namespace Wizard_Ninja_Samuria
 {
@@ -7,9 +7,10 @@ namespace Wizard_Ninja_Samuria
     {
         static void Main(string[] args)
         {
-            Human wizard = new Human("Wizard", 5, 25, 10, 50);
-            Human ninja = new Human("Ninja", 20, 20, 125, 175);
-            Human samuria= new Human("Samuria", 8, 3, 5, 200);
+            Human dummy = new Human("Dummy", 1, 0, 0, 1020);
+            Ninja ninja = new Ninja("Ninja");
+            Samuria samuria = new Samuria("Samuria");
+            Wizard wizard = new Wizard("Wizard");
         }
     }
 }

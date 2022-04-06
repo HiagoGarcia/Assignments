@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
 
-namespace Person
+namespace Wizard_Ninja_Samuria
 {
-    class Human
+    public class Human
     {
         // Fields for Human
         public string Name { get; set; }
         public int Strength { get; set; }
         public int Intelligence { get; set; }
         public int Dexterity { get; set; }
-        private int health { get; set; }
+        private int health;
 
         public int Health
         {
@@ -20,11 +20,16 @@ namespace Person
             }
             set
             {
-                if (health > 0)
-                {
-                    health = value;
-                }
+                health = value;
             }
+        }
+        public Human(string name, int str, int intel, int dex, int hp)
+        {
+            Name = name;
+            Strength = str;
+            Intelligence = intel;
+            Dexterity = dex;
+            health = hp;
         }
         public Human(string name)
         {
@@ -32,36 +37,23 @@ namespace Person
             Strength = 3;
             Dexterity = 3;
             Intelligence = 3;
-            Health = 100;
+            health = 100;
         }
 
-
-        public Human(string name, int strength, int intelligence, int dexterity, int health)
-        {
-            Name = name;
-            Strength = strength;
-            Intelligence = intelligence;
-            Dexterity = dexterity;
-            Health = health;
-        }
-
-
-        public int Attack(Human target)
+        public virtual int Attack(Human target)
         {
             int dmg = Strength * 3;
-            target.Health -= dmg;
+            target.health -= dmg;
             Console.WriteLine($"{Name} attacked {target.Name} for {dmg} damage!");
-            return target.Health;
+            return target.health;
         }
-
-        public int Spell(Human target, Human self)
+        public void GetInfo()
         {
-            int dmg = Intelligence * 5;
-            target.Health -= dmg;
-            Console.WriteLine($"{Name} tossed a spell at {target.Name} for {dmg} damgage!");
-            self.Health += dmg;
-            Console.WriteLine($"{Name} healed for {dmg} health");
-            return (target.Health); (self.Health);
+            Console.WriteLine(Name);
+            Console.WriteLine($"Strength {Strength}");
+            Console.WriteLine($"Intelligence {Intelligence}");
+            Console.WriteLine($"Dexterity {Dexterity}");
+            Console.WriteLine($"Health: {health}");
         }
     }
 }

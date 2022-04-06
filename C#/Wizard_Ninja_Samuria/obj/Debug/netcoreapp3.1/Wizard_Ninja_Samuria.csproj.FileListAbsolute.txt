@@ -1,0 +1,13 @@
+C:\Code Stuff\Assignments\Assignments\C#\Wizard_Ninja_Samuria\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samuria.csprojAssemblyReference.cache
+C:\Code Stuff\Assignments\Assignments\C#\Wizard_Ninja_Samuria\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samuria.AssemblyInfoInputs.cache
+C:\Code Stuff\Assignments\Assignments\C#\Wizard_Ninja_Samuria\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samuria.AssemblyInfo.cs
+C:\Code Stuff\Assignments\Assignments\C#\Wizard_Ninja_Samuria\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samuria.csproj.CoreCompileInputs.cache
+C:\Code Stuff\Assignments\Assignments\C#\Wizard_Ninja_Samuria\bin\Debug\netcoreapp3.1\Wizard_Ninja_Samuria.exe
+C:\Code Stuff\Assignments\Assignments\C#\Wizard_Ninja_Samuria\bin\Debug\netcoreapp3.1\Wizard_Ninja_Samuria.deps.json
+C:\Code Stuff\Assignments\Assignments\C#\Wizard_Ninja_Samuria\bin\Debug\netcoreapp3.1\Wizard_Ninja_Samuria.runtimeconfig.json
+C:\Code Stuff\Assignments\Assignments\C#\Wizard_Ninja_Samuria\bin\Debug\netcoreapp3.1\Wizard_Ninja_Samuria.runtimeconfig.dev.json
+C:\Code Stuff\Assignments\Assignments\C#\Wizard_Ninja_Samuria\bin\Debug\netcoreapp3.1\Wizard_Ninja_Samuria.dll
+C:\Code Stuff\Assignments\Assignments\C#\Wizard_Ninja_Samuria\bin\Debug\netcoreapp3.1\Wizard_Ninja_Samuria.pdb
+C:\Code Stuff\Assignments\Assignments\C#\Wizard_Ninja_Samuria\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samuria.dll
+C:\Code Stuff\Assignments\Assignments\C#\Wizard_Ninja_Samuria\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samuria.pdb
+C:\Code Stuff\Assignments\Assignments\C#\Wizard_Ninja_Samuria\obj\Debug\netcoreapp3.1\Wizard_Ninja_Samuria.genruntimeconfig.cache
