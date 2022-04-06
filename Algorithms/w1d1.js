@@ -42,33 +42,90 @@ class SinglyLinkedList {
   }
 
   /**
+   * Removes the last node of this list.
+   * - Time: O(?).
+   * - Space: O(?).
+   * @returns {any} The data from the node that was removed.
+   */
+  removeBack() {}
+
+  /**
+   * Determines whether or not the given search value exists in this list.
+   * - Time: O(?).
+   * - Space: O(?).
+   * @param {any} val The data to search for in the nodes of this list.
+   * @returns {boolean}
+   */
+  contains(val) {}
+
+  /**
+   * Determines whether or not the given search value exists in this list.
+   * - Time: O(?).
+   * - Space: O(?).
+   * @param {any} val The data to search for in the nodes of this list.
+   * @param {?ListNode} current The current node during the traversal of this list
+   *    or null when the end of the list has been reached.
+   * @returns {boolean}
+   */
+  containsRecursive(val, current = this.head) {}
+
+  /**
    * Creates a new node with the given data and inserts that node at the front
-   * of this list.
-   * - Time: (?).
-   * - Space: (?).
+   * of the list.
+   * - Time: O(1) constant.
+   * - Space: O(1) constant.
    * @param {any} data The data for the new node.
    * @returns {SinglyLinkedList} This list.
    */
   insertAtFront(data) {
-    
+    const newHead = new ListNode(data);
+    newHead.next = this.head;
+    this.head = newHead;
+    return this;
   }
 
   /**
    * Removes the first node of this list.
-   * - Time: (?).
-   * - Space: (?).
+   * - Time: O(1) constant.
+   * - Space: O(1) constant.
    * @returns {any} The data from the removed node.
    */
-  removeHead() {}
+  removeHead() {
+    if (this.isEmpty()) {
+      return null;
+    }
 
-  // EXTRA
+    const oldHead = this.head;
+    this.head = oldHead.next;
+    return oldHead.data;
+  }
+
   /**
    * Calculates the average of this list.
-   * - Time: (?).
-   * - Space: (?).
+   * - Time: O(n) linear, n = length of list.
+   * - Space: O(1) constant.
    * @returns {number|NaN} The average of the node's data.
    */
-  average() {}
+  average() {
+    let runner = this.head;
+    let sum = 0;
+    let cnt = 0;
+
+    while (runner) {
+      cnt++;
+      sum += runner.data;
+      runner = runner.next;
+    }
+
+    /**
+     * Dividing by 0 will give you NaN (Not a Number), so an empty list
+     * will return NaN in this case, it may make sense to allow NaN to be
+     * returned, because the average of an empty list doesn't make sense and
+     * it could be misleading to return 0 since 0 is the average of any
+     * list with a sum of 0 (due to negatives or all zeros).
+     */
+    return sum / cnt;
+  }
 
   /**
    * Determines if this list is empty.
@@ -170,7 +227,10 @@ const emptyList = new SinglyLinkedList();
 
 const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
 const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
-const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
+const firstThreeList = new SinglyLinkedList()
+  .insertAtBack(1)
+  .insertAtBack(2)
+  .insertAtBack(3);
 const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
 const unorderedList = new SinglyLinkedList().insertAtBackMany([
   -5, -10, 4, -3, 6, 1, -7, -2,
