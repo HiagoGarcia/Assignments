@@ -10,7 +10,7 @@ namespace Wizard_Ninja_Samuria
         public int Strength { get; set; }
         public int Intelligence { get; set; }
         public int Dexterity { get; set; }
-        private int health;
+        protected int health;
 
         public int Health
         {
