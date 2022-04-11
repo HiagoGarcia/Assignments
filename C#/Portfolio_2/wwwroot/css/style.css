@@ -1,0 +1,30 @@
+.Body {
+    align-items: center;
+    text-align: center;
+}
+
+.Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+    margin: auto;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .left {
+    flex: 1;
+}
+
+.wrapper .right {
+    flex: 2;
+}
+.box{
+    margin: auto;
+    border: 2px solid black;
+    width: 50%;
+}
