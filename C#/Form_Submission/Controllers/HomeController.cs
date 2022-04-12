@@ -17,7 +17,7 @@ namespace Form_Submission.Controllers
         {
             _logger = logger;
         }
-
+        [HttpGet("")]
         public IActionResult Index()
         {
             return View();
@@ -27,11 +27,16 @@ namespace Form_Submission.Controllers
         {
             if (ModelState.IsValid)
             {
-                return RedirectToAction("");
+                return RedirectToAction("newUser");
             }
             else{
-                return View("newUser");
+                return View("Index");
             }
+        }
+        [HttpGet("newUser")]
+        public IActionResult newUser()
+        {
+            return View("newUser");
         }
 
         public IActionResult Privacy()

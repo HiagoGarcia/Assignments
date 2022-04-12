@@ -14407,6 +14407,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Form_Submission\\Views\\Home\\NewUser.cshtml",
+      "TargetPath": "Views\\Home\\NewUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Form_Submission\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
