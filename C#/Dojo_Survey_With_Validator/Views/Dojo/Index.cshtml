@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+<body>
+    <div class="box">
+        @model Dojo_Survay
+        <form asp-action="Create" asp-controller="Dojo" method="post">
+            <div class="space">
+                <span asp-validation-for="Name"></span>
+                <label asp-for="Name"></label>
+                <input asp-for="Name">
+            </div>
+            <div class="space">
+                <span asp-validation-for="Dojo"></span>
+                <label asp-for="Dojo"></label>
+                <select asp-for="Dojo">
+                    <option value="San_Jose">San Jose</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Burbank">Burbank</option>
+                    <option value="Chicago">Chicago</option>
+                </select>
+            </div>
+            <div class="space">
+                <span asp-validation-for="Language"></span>
+                <label asp-for="Language"></label>
+                <select asp-for="Language">
+                    <option value="C#">C#</option>
+                    <option value="Python">Python</option>
+                    <option value="MERN">MERN</option>
+                    <option value="Ruby">Ruby</option>
+                </select>
+            </div>
+            <div class="space">
+                                <span asp-validation-for="Comment"></span>
+                <label asp-for="Comment"></label>
+                <textarea asp-for="Comment"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
