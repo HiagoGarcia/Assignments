@@ -1,0 +1,7 @@
+C:\Code Stuff\Assignments\Assignments\C#\Form_Submission\obj\Debug\netcoreapp3.1\Form_Submission.csprojAssemblyReference.cache
+C:\Code Stuff\Assignments\Assignments\C#\Form_Submission\obj\Debug\netcoreapp3.1\Form_Submission.AssemblyInfoInputs.cache
+C:\Code Stuff\Assignments\Assignments\C#\Form_Submission\obj\Debug\netcoreapp3.1\Form_Submission.AssemblyInfo.cs
+C:\Code Stuff\Assignments\Assignments\C#\Form_Submission\obj\Debug\netcoreapp3.1\Form_Submission.csproj.CoreCompileInputs.cache
+C:\Code Stuff\Assignments\Assignments\C#\Form_Submission\obj\Debug\netcoreapp3.1\Form_Submission.MvcApplicationPartsAssemblyInfo.cache
+C:\Code Stuff\Assignments\Assignments\C#\Form_Submission\obj\Debug\netcoreapp3.1\Form_Submission.RazorAssemblyInfo.cache
+C:\Code Stuff\Assignments\Assignments\C#\Form_Submission\obj\Debug\netcoreapp3.1\Form_Submission.RazorAssemblyInfo.cs
