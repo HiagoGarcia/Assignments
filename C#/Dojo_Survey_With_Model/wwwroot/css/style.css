@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    align-items: center;
+}
+.box{
+    border: 3px solid black;
+    margin: auto;
+    width: 30%;
+}
+form{
+    padding: 20px;
+}
+.space{
+    padding: 10px;
+}
