@@ -14402,18 +14402,13 @@
   "RootNamespace": "Dojo_Survey_With_Model",
   "Documents": [
     {
-      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Model\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Model\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Model\\Views\\Home\\result.cshtml",
-      "TargetPath": "Views\\Home\\result.cshtml",
+      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Model\\Views\\Dojo\\Index.cshtml",
+      "TargetPath": "Views\\Dojo\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14427,8 +14422,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Model\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Model\\Views\\Dojo\\result.cshtml",
+      "TargetPath": "Views\\Dojo\\result.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Model\\Views\\Dojo\\Privacy.cshtml",
+      "TargetPath": "Views\\Dojo\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
