@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model RandomString
+<div class="text-center">
+    <h3>Random passcode (passcode #@Context.Session.GetInt32("Count"))</h3>
+    <h1>@Model.str</h1>
+    <form asp-controller="Home" asp-action="CreateRandomString" method="POST">
+        <button class="btn btn-link">Generate New String</button>
+    </form>
+</div>

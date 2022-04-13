@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Validator\\Dojo_Survey_With_Validator.csproj",
+  "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Random_Passcode\\Random_Passcode.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14399,46 +14399,41 @@
     ],
     "CSharpLanguageVersion": 800
   },
-  "RootNamespace": "Dojo_Survey_With_Validator",
+  "RootNamespace": "Random_Passcode",
   "Documents": [
     {
-      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Validator\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Random_Passcode\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Validator\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Validator\\Views\\Shared\\Error.cshtml",
+      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Random_Passcode\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Validator\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Random_Passcode\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Random_Passcode\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Validator\\Views\\Dojo\\result.cshtml",
-      "TargetPath": "Views\\Dojo\\result.cshtml",
+      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Random_Passcode\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Validator\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Random_Passcode\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Random_Passcode\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Validator\\Views\\Dojo\\Index.cshtml",
-      "TargetPath": "Views\\Dojo\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Code Stuff\\Assignments\\Assignments\\C#\\Dojo_Survey_With_Validator\\Views\\Dojo\\Privacy.cshtml",
-      "TargetPath": "Views\\Dojo\\Privacy.cshtml",
       "FileKind": "mvc"
     }
   ],
