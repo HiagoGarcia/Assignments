@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Create a new Dish!</h1>
+    <a href="/">Home</a>
+
+    <form action="addDish" method="POST">
+        <label for="name_field">Name of Dish: </label>
+        <input type="text" name="Name" id="name_field">
+        <br>
+        <label for="chef_field">Name of Chef: </label>
+        <input type="text" name="Chef" id="chef_field">
+        <br>
+        <label for="taste_field">Tastiness</label>
+        <select name="Tastiness" id="taste_field">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br>
+        <label for="calories_field">Calories</label>
+        <input type="number" name="Calories" id="calories_field">
+        <br>
+        <label for="desc_field">Description</label>
+        <br>
+        <textarea name="Description" id="desc_field" cols="30" rows="10"></textarea>
+        <br>
+        <button type="submit">Add Dish!</button>
+    </form>
+</body>
+
+</html>
