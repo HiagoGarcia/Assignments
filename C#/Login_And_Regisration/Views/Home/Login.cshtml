@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">Register</a>
+    
+@model LoginUser
+
+<h3 class="text-center">Login</h3>
+<hr />
+
+<form asp-action="UserLogin" asp-controller="Home" method="POST">
+  <div class="form-group">
+    <label asp-for="LoginEmail"></label>
+    <span class="text-danger font-weight-bold" asp-validation-for="LoginEmail"></span>
+    <input class="form-control" asp-for="LoginEmail" />
+  </div>
+
+  <div class="form-group">
+    <label asp-for="LoginPassword"></label>
+    <span class="text-danger font-weight-bold" asp-validation-for="LoginPassword"></span>
+    @* prefill password for testing for easy login *@
+    <input class="form-control" asp-for="LoginPassword" value="" />
+  </div>
+
+  <button class="btn btn-outline-success">Login</button>
+</form>
+</body>
+</html>
