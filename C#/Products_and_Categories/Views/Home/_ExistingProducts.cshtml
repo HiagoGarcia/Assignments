@@ -1,0 +1,21 @@
+@model Product
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-striped">
+                    <tr>
+                        <th>Products</th>
+                    </tr>
+                    @foreach (var product in ViewBag.Products)
+                    {
+                        <tr>
+                            <td><a href="/products/@product.ProductID">@product.Name</a></td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+@model Association
+
+            <div class="row mt-5">
+                <div class="col-md">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Categories!</h3>
+                            <form asp-action="AddCategoryToProduct" asp-controller="Home" method="post"
+                                asp-route-productID="@Model.ProductID">
+                                <div class="space">
+                                    <label>Categories</label>
+                                    <select asp-for="@Model.CategoryID">
+                                        @foreach (var cate in ViewBag.UnrelatedCategories)
+                                        {
+                                            <option value="@cate.CategoryID">@cate.Name</option>
+                                        }
+                                    </select>
+                                </div>
+                                <input type="submit" value="Add Category">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>

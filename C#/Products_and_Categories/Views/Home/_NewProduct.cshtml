@@ -1,0 +1,21 @@
+    <div class="box">
+        @model Product
+        <form asp-action="AddProduct" asp-controller="Home" method="post">
+            <div class="space">
+                <label asp-for="Name"></label>
+                <span asp-validation-for="Name"></span>
+                <input asp-for="Name">
+            </div>
+            <div class="space">
+                <label asp-for="Description"></label>
+                <span asp-validation-for="Description"></span>
+                <textarea asp-for="Description"  cols="28" rows="5"></textarea>
+            </div>
+            <div class="space">
+                <label asp-for="Price"></label>
+                <span asp-validation-for="Price"></span>
+                <input asp-for="Price">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>

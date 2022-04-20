@@ -1,0 +1,11 @@
+    <div class="box">
+        @model Category
+        <form asp-action="AddCategory" asp-controller="Home" method="post">
+            <div class="space">
+                <label asp-for="Name"></label>
+                <span asp-validation-for="Name"></span>
+                <input asp-for="Name">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>

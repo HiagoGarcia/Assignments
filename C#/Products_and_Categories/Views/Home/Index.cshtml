@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="text-center">
+        <h2><a href="/products">Products</a> | Categories</h2>
+        <hr>
+        <div class="row mt-5">
+            <div class="col-md">
+                <partial name="_NewCategory"></partial>
+            </div>
+            <div class="col-md">
+                <partial name="_ExistingCategory"></partial>
+            </div>
+        </div>
+    </div>
+</div>

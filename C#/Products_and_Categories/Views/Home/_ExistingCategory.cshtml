@@ -1,0 +1,21 @@
+@model Category
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-striped">
+                    <tr>
+                        <th>Categories</th>
+                    </tr>
+                    @foreach (var category in ViewBag.Categories)
+                    {
+                        <tr>
+                            <td><a href="/@category.CategoryID">@category.Name</a></td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

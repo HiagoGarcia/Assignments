@@ -1,0 +1,33 @@
+@model Product
+<div class="container">
+    <div class="text-center">
+        <h2>Products | <a href="/">Categories</a></h2>
+        <hr>
+        <div class="row mt-5">
+            <div class="col-md">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Categories</th>
+                            </tr>
+                            @foreach (var sub in Model.Categories)
+                            {
+                                <tr>
+                                    <td>@sub.Category.Name</td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                </div>
+            </div>
+            @{
+                Association newAssoc = new Association()
+                {
+                    ProductID = Model.ProductID
+                };
+            }
+            <partial name="_AddCategory" model="@newAssoc"></partial>
+        </div>
+    </div>
+</div>
