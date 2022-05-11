@@ -2,53 +2,63 @@ import React, { useState } from 'react'
 
 const UserForm = (props) => {
     const [firstname, setFirstname] = useState("");
-    const [firstnameError, setFirstNameError] = useState("");
+    const [firstnameError, setFirstNameError] = useState(true);
     const handleFirstname = (e) => {
         setFirstname(e.target.value);
         if (e.target.value.length < 1) {
             setFirstNameError("First name is required")
         } else if (e.target.value.length < 2) {
             setFirstNameError("First name must be 2 characters or longer.")
+        } else {
+            setFirstNameError("")
         }
     }
 
     const [lastname, setLastname] = useState("");
-    const [lastnameError, setLastNameError] = useState("");
+    const [lastnameError, setLastNameError] = useState(true);
     const handleLastname = (e) => {
         setLastname(e.target.value);
         if (e.target.value.length < 1) {
             setLastNameError("Last name is required")
         } else if (e.target.value.length < 2) {
             setLastNameError("Last name must be 2 characters or longer.")
+        } else {
+            setLastNameError("")
         }
     }
 
     const [email, setEmail] = useState("");
-    const [emailError, setEmailError] = useState("");
+    const [emailError, setEmailError] = useState(true);
     const handleEmail = (e) => {
         setEmail(e.target.value);
         if (e.target.value.length < 1) {
             setEmailError("Email is required")
-        } else if (e.target.value.length < 2) {
-            setEmailError("Email must be 2 characters or longer")
+        } else if (e.target.value.length < 5) {
+            setEmailError("Email must be 5 characters or longer")
+        } else {
+            setEmailError("")
         }
     }
 
     const [password, setPassword] = useState("");
-    const [passwordError, setPasswordError] = useState("");
+    const [passwordError, setPasswordError] = useState(true);
     const handlePassword = (e) => {
         setPassword(e.target.value);
         if (e.target.value.length < 8) {
             setPasswordError("Password must be 8 characters or longer.")
+        } else {
+            setPasswordError("")
         }
     }
 
     const [confirmpassword, setConfirm] = useState("");
-    const [confirmpasswordError, setConfirmError] = useState("");
+    const [confirmpasswordError, setConfirmError] = useState(true);
     const handleConfirm = (e) => {
         setConfirm(e.target.value);
-        if (e.target.value !== e.password.value) {
+        if (e.target.value !== password) {
             setConfirmError("Must match your password.")
+        } else {
+            setConfirmError("")
         }
     }
 
