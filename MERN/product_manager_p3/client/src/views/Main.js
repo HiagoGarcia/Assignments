@@ -4,14 +4,12 @@ import ProductForm from '../components/ProductForm';
 import ProductList from "../components/ProductList";
 
 const Main = (props) => {
-    const [product, setProduct] = useState([])
-    const [loaded, setLoaded] = useState(false);
+    const [product, setProduct] = useState()
 
     useEffect(() => {
         axios.get('http://localhost:8000/api/product')
             .then(res => {
                 setProduct(res.data);
-                setLoaded(true);
 
             })
             .catch(err => console.log(err));
@@ -25,7 +23,7 @@ const Main = (props) => {
         <div>
             <ProductForm />
             <hr />
-            {loaded && <ProductList product={product} removeFromDom={removeFromDom} />}
+            {product && <ProductList product={product} removeFromDom={removeFromDom} />}
         </div>
     )
 

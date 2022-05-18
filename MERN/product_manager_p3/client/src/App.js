@@ -14,11 +14,11 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-            <h1>Product Manager</h1>
+        <h1>Product Manager</h1>
         <Routes>
-          <Route path ="/api/product/" element={<Main/>}/>
-          <Route path ="/api/product/:id" element={<Detail/>}/>
-          <Route path ="/api/product/:id/edit" element={<Update/>}/>
+          <Route path="/api/product/" element={<Main />} />
+          <Route path="/api/product/:id" element={<Detail />} />
+          <Route path="/api/product/:id/edit" element={<Update />} />
         </Routes>
       </div>
     </BrowserRouter>
@@ -26,3 +26,4 @@ function App() {
 }
 
 export default App;
+

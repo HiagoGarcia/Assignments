@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useParams, Link} from "react-router-dom";
+import { useParams, Link, useNavigate} from "react-router-dom";
 
 const Update = (props) => {
     const { id } = useParams();
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/product/${id}`)
@@ -25,7 +26,10 @@ const Update = (props) => {
             price,
             description
         })
-            .then(res => console.log(res))
+            .then(res => {
+                console.log(res)
+                navigate(`/api/product/${id}`)
+            })
             .catch(err => console.error(err));
     }
 
@@ -41,14 +45,14 @@ const Update = (props) => {
                         onChange={(e) => { setTitle(e.target.value) }} />
                 </p>
                 <p>
-                    <label>Title</label><br />
+                    <label>Price</label><br />
                     <input type="text"
                         name='price'
                         value={price}
                         onChange={(e) => { setPrice(e.target.value) }} />
                 </p>
                 <p>
-                    <label>Title</label><br />
+                    <label>Description</label><br />
                     <input type="text"
                         name='description'
                         value={description}

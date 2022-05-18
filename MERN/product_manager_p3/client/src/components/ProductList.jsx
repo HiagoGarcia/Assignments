@@ -17,13 +17,13 @@ const ProductList = (props) => {
         <div>
             {props.product.map((product, idx) => {
                 return (
-                    <div>
-                        <p key={idx}>
-                            <Link to={`/api/product/${product._id}`}>{product.title}</Link>
-                            |
-                            <button onClick={(e) => { deleteProduct(product._id) }}>Delete</button>
-                        </p>
-                    </div>
+
+                    <p key={idx}>
+                        <Link to={`/api/product/${product._id}`}>{product.title}</Link>
+                        |
+                        <button onClick={(e) => { deleteProduct(product._id) }}>Delete</button>
+                    </p>
+
                 )
             }
             )}
