@@ -9,6 +9,10 @@ const AuthorSchema = new mongoose.Schema({
         type: String,
         required: [true, "Last name is required"],
         minlength: [3, "Last name must be at least 3 long"]
+    },
+    rating: {
+        type: Number,
+        required: [true, "A rating must be chosen"]
     }
 }, {timestamps: true});
 

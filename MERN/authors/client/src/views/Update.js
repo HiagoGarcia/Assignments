@@ -34,6 +34,7 @@ const Update = (props) => {
                         onSubmitProp={updateAuthor}
                         initialFirstName={author.firstName}
                         initialLastName={author.lastName}
+                        initialRating={author.rating}
                     />
                     <Link to="/">Cancel</Link>
                 </>

@@ -8,10 +8,11 @@ module.exports.index = (req, res) => {
 };
 
 module.exports.createAuthor = (req, res) => {
-    const {firstName, lastName} = req.body;
+    const {firstName, lastName, rating} = req.body;
     Author.create({
         firstName,
-        lastName
+        lastName,
+        rating
     })
     .then(author => req.json(author))
     .catch(err => res.status(400).json(err))
