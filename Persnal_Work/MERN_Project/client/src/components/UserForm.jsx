@@ -10,63 +10,67 @@ export default (props) => {
     const [password, setPassword] = useState("")
 
     const [confirmPassword, setConfirmPassword] = useState("");
-    const [errors, setErrors] = useState([])
+    const [errors, setErrors] = useState({})
+    const [isSubmitted, setIsSubmitted] = useState(false);
     const navigate = useNavigate();
+    const { user } = props
 
-    const onSubmitHandler = e => {
+    const renderErrorMessage = (name) =>
+        name === errors.name && (
+            <div className="error">{errors.message}</div>
+        );
+
+    const onSubmitHandler = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:8000/api/user', {
+        axios.post('http://localhost:8000/api/user/register', {
             firstName,
             lastName,
             email,
-            password
-        })
-        .then(res => {
-            console.log(res)
-            navigate('/')
-        })
-        .catch(err => {
-            const errArr = []
-            const errResData = err.response.data.errors
-            console.log(errResData)
-            for (const key in errResData) {
-                errArr.push(errResData[key]["message"])
-            }
-            if(password !== confirmPassword) {
-                errArr.push('Passwords do not match')
-                return
-            }
-            setErrors(errArr)
-        })
+            password,
+            confirmPassword
+        }, { withCredentials: true })
+
+            .then(res => {
+                console.log(res)
+                navigate('/')
+            })
+            .catch(err => {
+                const errArr = []
+                const errResData = err.response.data.errors
+                console.log(errResData)
+                for (const key in errResData) {
+                    errArr.push(errResData[key]["message"])
+                }
+                setErrors(errArr)
+            })
     }
 
-    return(
+
+    return (
         <div>
             <form onSubmit={onSubmitHandler}>
-            {
-                errors.map((err, i) => (
-                    <p key={i} style={{color: "red"}}>{err}</p>
-                ))
-            }
                 <p>
                     <label>First Name:</label><br />
-                    <input type='text' onChange={(e) => setFirstName(e.target.value)} value = {firstName} />
+                    <input type='text' onChange={(e) => setFirstName(e.target.value)} value={firstName} />
+                    {renderErrorMessage("firstName")}
                 </p>
                 <p>
                     <label>Last Name:</label><br />
-                    <input type='text' onChange={(e) => setLastName(e.target.value)} value = {lastName} />
+                    <input type='text' onChange={(e) => setLastName(e.target.value)} value={lastName} />
+                    {renderErrorMessage("firstName")}
                 </p>
                 <p>
                     <label>Email:</label><br />
-                    <input type="email" onChange={(e) => setEmail(e.target.value)} value = {email} />
+                    <input type="email" onChange={(e) => setEmail(e.target.value)} value={email} />
                 </p>
                 <p>
                     <label>Password:</label><br />
-                    <input type='password' onChange={(e) => setPassword(e.target.value)} value = {password} />
+                    <input type='password' onChange={(e) => setPassword(e.target.value)} value={password} />
                 </p>
                 <p>
                     <label>Confirm Password:</label><br />
-                    <input type='password' required onChange={(e) => setConfirmPassword(e.target.value)} value = {confirmPassword} />
+                    <input type='password' onChange={(e) => setConfirmPassword(e.target.value)} value={confirmPassword} />
+                    {renderErrorMessage("firstName")}
                 </p>
                 <input type='submit' />
             </form>

@@ -1,18 +1,31 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { Navbar, Container, Nav } from 'react-bootstrap'
 
 const Navigationbar = (props) => {
     const [user, setUser] = useState()
 
-    useEffect((userId) => {
-        axios.get(`http://localhost:8000/api/user/${userId}`)
+    const navigate = useNavigate()
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        axios.post("http://localhost:8000/api/user/logout", {}, {withCredentials: true})
+            .then(res => {
+                setUser(null)
+                navigate('/')
+            })
+            .catch(err => console.log(err))
+    }
+
+    useEffect(() => {
+        axios.get(`http://localhost:8000/api/auth`, { withCredentials: true })
             .then(res => {
                 setUser(res.data)
-            });
+            })
+            .catch(err => console.log(err))
     }, [])
-
 
     return (
         <div>
@@ -28,13 +41,17 @@ const Navigationbar = (props) => {
                             <Navbar.Text>|</Navbar.Text>
                             <Nav.Link href="/support">Contact</Nav.Link>
                             <Navbar.Text>|</Navbar.Text>
-                            <Nav.Link href={`/user/`}>Account</Nav.Link>
+                            {user && <Nav.Link href={`/user/${user._id}`}>Account</Nav.Link>}
                         </Nav>
                     </Navbar.Collapse>
                     <Navbar.Collapse className="justify-content-end">
-                        <Navbar.Text>
-                            Signed in as: <a href="/login">Place Holder</a>
-                        </Navbar.Text>
+                        {user ? <div className="logged">
+                            <Navbar.Text>
+                                Signed in as: {user.firstName} {user.lastName} 
+                            </Navbar.Text>
+                            <button onClick={handleSubmit}>Logout</button>
+                        </div>:
+                            <Nav.Link href="/login">Login</Nav.Link>}
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

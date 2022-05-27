@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt')
 const ForumSchema = new mongoose.Schema({
     firstName: {
         type: String,
@@ -14,7 +15,8 @@ const ForumSchema = new mongoose.Schema({
 
     email: {
         type: String,
-        required: [true, "Email is required"]
+        required: [true, "Email is required"],
+        unique: true
     },
 
     password: {
@@ -22,6 +24,32 @@ const ForumSchema = new mongoose.Schema({
         required: [true, "Password is requrired"],
         minlength: [8, "Password must be at least 8 characters long"]
     }
-}, {timestamps: true});
+}, { timestamps: true });
+
+ForumSchema.virtual('confirmPassword')
+    .get(() => this.confirmPassword)
+    .set(value => this.confirmPassword = value);
+
+
+ForumSchema.pre('validate', function (next) {
+    if (this.password !== this.confirmPassword) {
+        this.invalidate('confirmPassword', 'Password must match confirm password');
+    }
+    next();
+});
+
+// ForumSchema.pre('validate', function(next){
+//     .find()
+// })
+
+// this should go after 
+ForumSchema.pre('save', function (next) {
+    bcrypt.hash(this.password, 10)
+        .then(hash => {
+            this.password = hash;
+            next();
+        });
+});
+
 
 module.exports.User = mongoose.model('User', ForumSchema);

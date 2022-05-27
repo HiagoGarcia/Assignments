@@ -10,6 +10,7 @@ const Login = (props) => {
         axios.get('http://localhost:8000/api/user')
             .then(res => {
                 setUser(res.data)
+                console.log(res.data)
             });
     }, []);
 

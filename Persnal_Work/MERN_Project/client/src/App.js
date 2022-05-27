@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NewUser from './views/NewUser';
 import HomePage from './views/HomePage';
 import Login from './views/Login';
+import UserLogout from './components/UserLogout';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/user/new" element={<NewUser />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<UserLogout />} />
         </Routes>
       </div>
     </BrowserRouter>
