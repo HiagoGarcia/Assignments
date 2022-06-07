@@ -1,14 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { Navbar, Container, Nav } from 'react-bootstrap'
 import Navigationbar from "../components/Navigationbar";
 
 const HomePage = (props) => {
     const [user, setUser] = useState()
 
-    useEffect((userId) => {
-        axios.get(`http://localhost:8000/api/user/${userId}`)
+    useEffect(() => {
+        axios.get(`http://localhost:8000/api/auth`, { withCredentials: true})
             .then(res => {
                 setUser(res.data)
             });
@@ -17,7 +15,7 @@ const HomePage = (props) => {
 
     return (
         <div>
-            <Navigationbar />
+            <Navigationbar/>
         </div>
     )
 }

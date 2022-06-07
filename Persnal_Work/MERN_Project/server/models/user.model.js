@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt')
-const ForumSchema = new mongoose.Schema({
+const Schema = mongoose.Schema;
+let UserSchema = new Schema({
+    _id: Schema.Types.ObjectId,
+
     firstName: {
         type: String,
         required: [true, "First name is required"],
@@ -23,15 +26,20 @@ const ForumSchema = new mongoose.Schema({
         type: String,
         required: [true, "Password is requrired"],
         minlength: [8, "Password must be at least 8 characters long"]
-    }
+    },
+
+    discussion: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Discussion"
+    }]
 }, { timestamps: true });
 
-ForumSchema.virtual('confirmPassword')
+UserSchema.virtual('confirmPassword')
     .get(() => this.confirmPassword)
     .set(value => this.confirmPassword = value);
 
 
-ForumSchema.pre('validate', function (next) {
+UserSchema.pre('validate', function (next) {
     if (this.password !== this.confirmPassword) {
         this.invalidate('confirmPassword', 'Password must match confirm password');
     }
@@ -43,7 +51,7 @@ ForumSchema.pre('validate', function (next) {
 // })
 
 // this should go after 
-ForumSchema.pre('save', function (next) {
+UserSchema.pre('save', function (next) {
     bcrypt.hash(this.password, 10)
         .then(hash => {
             this.password = hash;
@@ -52,4 +60,4 @@ ForumSchema.pre('save', function (next) {
 });
 
 
-module.exports.User = mongoose.model('User', ForumSchema);
+module.exports.User = mongoose.model('User', UserSchema);

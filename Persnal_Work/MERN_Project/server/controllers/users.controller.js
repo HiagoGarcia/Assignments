@@ -32,7 +32,6 @@ module.exports = {
                 httpOnly: true
             })
             .json({ msg: "success!" });
-        console.log(userToken)
     },
 
     register: (req, res) => {
@@ -56,6 +55,46 @@ module.exports = {
     logout: (req, res) => {
         res.clearCookie('usertoken');
         res.sendStatus(200);
+    },
+
+    getUser: (req, res) => {
+        User.findOne({ _id: req.params.id })
+            .then(user => res.json(user))
+            .catch(err => res.json(err))
+    },
+
+    getAllUsers: (req, res) => {
+        User.find({})
+            .then(user => res.json(user))
+            .catch(err => res.json(err))
+    },
+
+    updateUser: (req, res) => {
+        User.findOneAndUpdate = ({ _id: req.params.id }, req.body, { new: true })
+            .then(updateUser => res.json(updateUser))
+            .catch(err => res.json(err))
+    },
+
+    deleteUser: (req, res) => {
+        User.deleteOne({ _id: req.params.id })
+            .then(deleteConfirmation => res.json(deleteConfirmation))
+            .catch(err => res.json(err))
+    },
+
+    getLoggedUser: (req, res) => {
+        const userToken = res.locals.payload;
+        console.log(userToken)
+        User.findOne({ _id: userToken.id })
+            .then(loggedUser => {
+                res.json(loggedUser)
+            })
+            .catch(err => res.json(err))
+    },
+
+    //Users with discussions
+    getAllDiscussions: async (req, res) => {
+        let foundUser = await User.find({email: req.params.email}).populate("discussions");
+        res.json(foundUser)
     }
 }
 
@@ -65,48 +104,14 @@ module.exports.index = (req, res) => {
     })
 };
 
-module.exports.createUser = (req, res) => {
-    const { firstName, lastName, email, password } = req.body;
-    User.create({
-        firstName,
-        lastName,
-        email,
-        password
-    })
-        .then(user => res.json(user))
-        .catch(err => res.status(400).json(err));
-}
-
-module.exports.getUser = (req, res) => {
-    User.findOne({ _id: req.params.id })
-        .then(user => res.json(user))
-        .catch(err => res.json(err))
-}
-
-module.exports.getAllUsers = (req, res) => {
-    User.find({})
-        .then(user => res.json(user))
-        .catch(err => res.json(err))
-}
-
-module.exports.updateUser = (req, res) => {
-    User.findOneAndUpdate = ({ _id: req.params.id }, req.body, { new: true })
-        .then(updateUser => res.json(updateUser))
-        .catch(err => res.json(err))
-}
-
-module.exports.deleteUser = (req, res) => {
-    User.deleteOne({ _id: req.params.id })
-        .then(deleteConfirmation => res.json(deleteConfirmation))
-        .catch(err => res.json(err))
-}
-
-module.exports.getLoggedUser = (req, res) => {
-    const userToken = res.locals.payload;
-    console.log(userToken)
-    User.findOne({ _id: userToken.id })
-        .then(loggedUser => {
-            res.json(loggedUser)
-        })
-        .catch(err => res.json(err))
-}
+// module.exports.createUser = (req, res) => {
+//     const { firstName, lastName, email, password } = req.body;
+//     User.create({
+//         firstName,
+//         lastName,
+//         email,
+//         password
+//     })
+//         .then(user => res.json(user))
+//         .catch(err => res.status(400).json(err));
+// }
