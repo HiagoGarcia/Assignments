@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Nav } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import Navigationbar from "../components/Navigationbar";
+import UserDiscussions from "../components/UserDiscussions";
 import UserInfo from "../components/UserInfo";
 
 
@@ -36,7 +37,14 @@ const UserDetail = (props) => {
                 </div>
             </div>
             <Container>
-                {user && <UserInfo user={user} />}
+                <div className="row">
+                    {user && <UserInfo user={user} />}
+                </div>
+                <div className="row">
+                    <div className="col-md-4 ms-auto">
+                        <UserDiscussions />
+                    </div>
+                </div>
             </Container>
         </Container>
     )
